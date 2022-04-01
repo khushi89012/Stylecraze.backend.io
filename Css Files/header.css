@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
+}
+#p_container {
+  height: 90px;
+  position: relative;
+  width: 99.9%;
+  border: 1px solid transparent;
+}
+#p_logo {
+  display: grid;
+  width: 98%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100%;
+  grid-template-areas: ". b b . a a a . c c d d";
+  /* height: 65%; */
+  border: 0.1px solid transparent;
+}
+#co_name {
+  grid-area: a;
+}
+#searchbar {
+  grid-area: b;
+  margin: 0 auto;
+  border: 0.1px solid #999999;
+  padding: 5%;
+  color: #999999;
+  border-radius: 20px;
+}
+#P_sigin{
+  grid-area: c;
+  width: 80%;
+  color: #fe5c75;
+  border: 0px;
+  font-size: large;
+  background-color: white;
+}
+#P_login{
+  grid-area: d;
+  width: 20%;
+  border: 0ch;
+  color: #fe5c75;
+  font-size: large;
+  background-color: white;
+}
+#varaitise :hover {
+  color: #fe5c75;
+  cursor: pointer;
+}
+#varaitise {
+  height: 33%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: large;
+  line-height: 30px;
+  border: 0.2px solid transparent;
+}
+#transparentline {
+  height: 80%;
+  margin-top: 0.1%;
+  border: 1px solid #fe5c75;
+}
+#Dropdown {
+  position: absolute;
+  z-index: 1;
+  width: 99.8%;
+  height: 270px;
+  margin-top: -1%;
+  border: 0.2px solid transparent;
+}
+#hover_box {
+  height: 250px;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  border: 1px solid transparent;
+  background-color: white;
+  /* margin-top: 1%; */
+  justify-content: space-evenly;
+}
+#hover_box > div {
+  height: 100%;
+  width: 15%;
+  border: 0.1px solid transparent;
+}
+#hover_box > div > img {
+  height: 75%;
+  width: 100%;
+}
+#hover_box > div > p {
+  font-size: small;
+  height: 23%;
+  text-align: left;
+  line-height: 18px;
+  border: 0.1px solid transparent;
+  margin-top: 0%;
+  overflow: hidden;
+  color: #777777;
+}
+#redline {
+  height: 70%;
+  margin-top: 0.2%;
+  border-right: 1px solid #fe5c75;
+}
+#trial {
+  height: 100px;
+  width: 99.8%;
+  border: 0.1px solid red;
+}
+@media only screen and (min-width: 0px) and (max-width: 391px) {
+  #varaitise {
+    display: none;
+  }
+  #p_logo {
+    display: grid;
+    grid-template-columns: repeat(12, 2fr);
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas:
+      "a a a a a a a a a a a a"
+      "b b b b b b b b b b b b";
+    border: 0.1px solid transparent;
+  }
+  #co_name {
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 20%;
+    grid-area: a;
+  }
+  #searchbar {
+    grid-area: b;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 300px;
+    border: 0.1px solid #999999;
+    padding: 3%;
+    color: #999999;
+    border-radius: 20px;
+  }
+}
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+  #p_logo {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 100%);
+    grid-template-areas: "a a a . . . b b b .";
+    border: 0.1px solid transparent;
+  }
+  #co_name {
+    width: 130%;
+    margin-top: 2%;
+    margin-left: 10%;
+    grid-area: a;
+  }
+  #searchbar {
+    grid-area: b;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 0.1px solid #999999;
+    padding: 3% 8%;
+    margin-left: 33%;
+    color: #999999;
+    border-radius: 20px;
+  }
+  #varaitise {
+    height: 33%;
+    width: 95%;
+    font-size: small;
+    border: 0.2px solid transparent;
+  }
+  #hover_box {
+    height: 250px;
+    width: 97%;
+    display: flex;
+    margin: auto;
+    border: 1px solid transparent;
+    margin-top: 1%;
+    justify-content: space-evenly;
+  }
+  #redline {
+    height: 50%;
+    margin-top: 0.7%;
+    /* margin-left: 0.7%; */
+    border: 1px solid #fe5c75;
+  }
+}

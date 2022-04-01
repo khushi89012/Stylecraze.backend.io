@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg" hreflang="en-in" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./Css Files/loginstyle.css">
+</head>
+<body>
+    <div id="s_cont">
+        <div id="s_left">
+            <img src = "https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" id="logo"/>
+           <img src="https://i.pinimg.com/originals/24/4a/57/244a57cd51c21cb2bab33a0218add5d4.jpg" alt="image" id="img1">
+           <h3>Serving Beauty Tips for Women</h3>
+        </div>
+        
+        <div id="s_right">
+            <h1>Register Here</h1>
+            <div id="s_formDiv">
+                <form>
+                    <input type="text" placeholder="Enter Name" id="name"/>
+                    <input type = number placeholder= "Enter Mobile Number" id="mbNum"/>
+                    <input type ="email" placeholder="Enter Email" id="email"/>
+                    <input type="password" placeholder="Enter Password" id="password"/>
+                    <input type ="submit" id= "submit"/>
+                </form>
+                <p>Already Have an Account? <span>Login</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../Js files/register.js" type="module">
+    import Register from "./Js files/register.js"
+
+    document.querySelector("#submit").addEventListener("click", goagainregister)
+
+    function  goagainregister(){
+        Register();
+    }
+</script>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Care Page</title>
+    <link rel="stylesheet" href="./Css Files/S_styleSheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg" hreflang="en-in" />
+    <link rel="stylesheet" href="./Css Files/header.css" />
+    <link rel="stylesheet" href="./Css Files/footer.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    </head>
+    <body>
+            <!-- Header Strts -->
+    <div id="header"></div>
+    <div id="Dropdown"></div>
+    <!-- Header Ends -->
+
+        <h1 id = "S_secTitle">DRY HAIR CARE</h1>
+    <div class="S_Poster_div">
+        <img src="https://cdn2.stylecraze.com/wp-content/uploads/2012/12/How-To-Keep-Your-Hair-Healthy--20-Tips-Home-Remedies-720x810.jpg.webp" alt="poster">
+        <div class="S_About" >
+            <h2>How To Keep Your Hair Healthy – 20 Tips + Home Remedies</h2>
+            <p>Almost every woman fantasizes about having thick, long hair. However, pollution and the use of styling products and colorants on a regular basis harm the hair, making it thin, dry, and fragile (1). That is why we are here to […]</p>
+            <div id="S_author"><p>BY RAMONA SINHA</p></div>
+        </div>
+    </div>
+    <div class="S_beautyTips_div">
+        <div class="S_Tips">
+            <img src="https://cdn2.stylecraze.com/wp-content/uploads/2021/01/Is-Olive-Oil-Effective-For-Dry-Hair.jpg.webp"/>
+            <h1>Is Olive Oil Effective For Dry Hair?</h1>
+            <p>MEDICALLY REVIEWED BY DR. MADHURI AGARWAL , MBBS, MD (DERMATOLOGY) DERMATOLOGIST, COSMETIC DERMATOLOGY</p>
+        </div>
+        <div class="S_Tips">
+            <img src="https://cdn2.stylecraze.com/wp-content/uploads/2013/12/Mesotherapy-For-Hair--Procedure-Results-Side-Effects-And-More.jpg.webp" alt="">
+            <h1>8 Best Salon Treatments For Dry Hair</h1>
+            <p>MEDICALLY REVIEWED BY DR. SHRUTI CHAVAN , MBBS, DERMATOLOGIST, DERMATOLOGIST</p>
+        </div>
+        <div class="S_Tips">
+            <img src="https://cdn2.stylecraze.com/wp-content/uploads/2015/01/186-dry-hair-treatments-from-your-kitchen_124515046.jpg.webp" alt="">
+            <h1>24 Dry Hair Treatments From Your Kitchen</h1>
+            <p>BY ARSHIYA SYEDA</p>
+        </div>
+        
+    <!-- Footer Starts -->
+    <div id="footer"></div>
+    <!-- Footer Ends -->
+</body>
+</html>
+
+
+<script type="module">
+    // Ḥeader Starts
+    let Header_container = document.getElementById("header");
+  
+    import {
+      Header,
+      Makeup,
+      empty,
+      Haircare,
+      Skincare,
+      Hairstyles,
+      Health,
+    } from "./header.js";
+  
+    Header_container.innerHTML = Header();
+  
+    document.getElementById("makeup").onmouseenter = function () {
+      Makeup();
+    };
+    document.getElementById("haircare").onmouseenter = function () {
+      Haircare();
+    };
+    document.getElementById("skincare").onmouseenter = function () {
+      Skincare();
+    };
+    document.getElementById("hairstyles").onmouseenter = function () {
+      Hairstyles();
+    };
+    document.getElementById("health").onmouseenter = function () {
+      Health();
+    };
+    document.getElementById("k_container").onmouseenter = function () {
+      empty();
+    };
+    document.getElementById("p_logo").onmouseenter = function () {
+      empty();
+    };
+  
+    // Ḥeader Ends
+  
+    // Footer start
+    let Footer_container = document.getElementById("footer");
+  
+    import Footer from "./footer.js";
+  
+    Footer_container.innerHTML = Footer();
+
+    document.querySelector("#ED").addEventListener("click", () =>{
+        window.location.href = "editorial.html"
+    })
+    document.querySelector("#TU").addEventListener("click", () =>{
+        window.location.href = "terms_of_use.html"
+    })
+    // Footer Ends
+
+    document.querySelector("#makeup").addEventListener("click", () => {
+        window.location.href = "MakeUp.html";
+    })
+
+    document.querySelector("#haircare").addEventListener("click", () => {
+        window.location.href = "hairCare.html";
+    })
+    document.querySelector("#co_name").addEventListener("click", () => {
+        window.location.href = "index.html";
+    })
+    document.querySelector(".makeuptry").addEventListener("click", () => {
+        window.location.href = "D_Makeup.html";
+    })
+    document.querySelector(".OliveHair").addEventListener("click", () => {
+        window.location.href = "Olive.html";
+    })
+    document.querySelector("#dryHairpage").addEventListener("click", () => {
+        window.location.href = "dryHair.html";
+    })
+
+    document.querySelector("#searchbar").addEventListener("keypress",(ele)=>{
+        let value = document.querySelector("#searchbar").value;
+        if(ele.code === "Enter"){
+            if(value === "Lipstick"){
+                window.location.href = "Lipstick.html"
+            }
+            else if(value === "Bride"){
+                window.location.href = "bridal.html"
+            }
+            else if(value === "Ayurveda"){
+                window.location.href = "Ayurveda.html"
+            }
+            else if(value === "Mehandi"){
+                window.location.href = "mehandiDesigns.html"
+            }
+            else{
+                alert("Search Valid Details")
+                window.location.href = "index.html"
+            }
+        }
+    })
+  </script>

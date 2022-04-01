@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MakeUp Page</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg"
+      hreflang="en-in"
+    />
+    <link rel="stylesheet" href="./Css Files/header.css" />
+    <link rel="stylesheet" href="./Css Files/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./Css Files/S_styleSheet.css">
+  </head>
+  <body>
+    <!-- Header Strts -->
+    <div id="header"></div>
+    <div id="Dropdown"></div>
+    <!-- Header Ends -->
+    <!--  -->
+    <h1 id="S_secTitle">MAKE UP</h1>
+    <div id="S_categories_div">
+      <div class="S_categories" class="MehndiLagao">Mehandi Designs</div>
+      <div class="S_categories">Bridal Makeup</div>
+      <div class="S_categories">Celebrity Makeup</div>
+      <div class="S_categories">Nail Art</div>
+      <div class="S_categories">Makeup Ideas</div>
+      <div class="S_categories">Face Makeup</div>
+      <div class="S_categories">Lip Make Up</div>
+      <div class="S_categories">Eye Make Up</div>
+    </div>
+    <div class="S_Poster_div">
+      <img
+        src="https://cdn2.stylecraze.com/wp-content/uploads/2013/09/25-Best-Eye-Makeup-Tutorials.-720x810.jpg.webp"
+        alt="poster1"
+        id="hello eyeliner"
+      />
+      <div class="S_About">
+        <h2>25 Best Eye Makeup Tutorials</h2>
+        <p>
+          There is no other territory that is richer for experimentation than
+          applying eyeshadow for makeup. This is because different eye makeup
+          can be highly transformative. The best part is you do not have to be a
+          professional to achieve these […]
+        </p>
+        <div id="S_author"><p>BY ESHA SAXENA</p></div>
+      </div>
+    </div>
+    <div class="S_beautyTips_div">
+      <div class="S_Tips">
+        <img
+          src="https://cdn2.stylecraze.com/wp-content/uploads/2013/08/1912_11-Amazing-Benefits-Of-Antioxidants-For-Skin-Hair-And-Health_shutterstock_298467293.jpg.webp"
+        />
+        <h1>Tutorial – How To Do Light Makeup</h1>
+        <p>BY NISHA BAGHADIA</p>
+      </div>
+      <div class="S_Tips">
+        <img
+          src="https://cdn2.stylecraze.com/wp-content/uploads/2012/12/How-To-Wear-Red-Lipstick-3.jpg.webp"
+          alt=""
+        />
+        <h1>How To Wear Red Lipstick</h1>
+        <p>BY ESHA SAXENA</p>
+      </div>
+      <div class="S_Tips">
+        <img
+          src="https://cdn2.stylecraze.com/wp-content/uploads/2019/02/How-To-Thin-Out-Nail-Polish-Banner.jpg.webp"
+          alt=""
+        />
+        <h1>How To Thin Out Nail Polish That’s Thick And Clumpy</h1>
+        <p>BY ESHA SAXENA</p>
+      </div>
+    </div>
+    <div class="S_Poster_div" id="S_PosterArea">
+      <div class="S_About" id="S_Poster1">
+        <h2>Simple Tips To Darken Mehendi And Make It Long-Lasting</h2>
+        <p>
+          Henna or mehendi has been used as a dye to color the skin, hair, and
+          clothes for centuries (1). It is used for body art in Arabia (the
+          Arabian peninsula), ancient Persia (modern Iran) and Mesopotamia
+          (parts of present-day Iran, […]
+        </p>
+        <div id="S_author"><p>BY ESHA SAXENA</p></div>
+      </div>
+      <img
+        src="https://cdn2.stylecraze.com/wp-content/uploads/2014/02/How-To-Make-Mehendi-Darker-And-Long-Lasting.jpg.webp"
+      />
+    </div>
+    <div id="S_moreMakeUpTips_div" class="S_beautyTips_div"></div>
+    <!--  -->
+    <!-- Footer Starts -->
+    <div id="footer"></div>
+    <!-- Footer Ends -->
+  </body>
+</html>
+<script src="./Js files/MakeUp.js">
+  document.querySelector(".MehndiLagao").addEventListener("click",()=>{
+    console.log("MehndiLagao");
+  })
+</script>
+
+<script type="module">
+  // Ḥeader Starts
+  let Header_container = document.getElementById("header");
+
+  import {
+    Header,
+    Makeup,
+    empty,
+    Haircare,
+    Skincare,
+    Hairstyles,
+    Health,
+  } from "./header.js";
+
+  Header_container.innerHTML = Header();
+
+  document.getElementById("makeup").onmouseenter = function () {
+    Makeup();
+  };
+  document.getElementById("haircare").onmouseenter = function () {
+    Haircare();
+  };
+  document.getElementById("skincare").onmouseenter = function () {
+    Skincare();
+  };
+  document.getElementById("hairstyles").onmouseenter = function () {
+    Hairstyles();
+  };
+  document.getElementById("health").onmouseenter = function () {
+    Health();
+  };
+  document.querySelector(".S_Poster_div").onmouseenter = function () {
+    empty();
+  };
+  document.getElementById("p_logo").onmouseenter = function () {
+    empty();
+  };
+
+  // Ḥeader Ends
+
+  // Footer start
+  let Footer_container = document.getElementById("footer");
+
+  import Footer from "./footer.js";
+
+  Footer_container.innerHTML = Footer();
+
+  document.querySelector("#ED").addEventListener("click", () => {
+    window.location.href = "editorial.html";
+  });
+  document.querySelector("#TU").addEventListener("click", () => {
+    window.location.href = "terms_of_use.html";
+  });
+  // Footer Ends
+
+  document.querySelector("#makeup").addEventListener("click", () => {
+    window.location.href = "MakeUp.html";
+  });
+
+  document.querySelector("#haircare").addEventListener("click", () => {
+    window.location.href = "hairCare.html";
+  });
+  document.querySelector("#co_name").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  document.querySelector(".makeuptry").addEventListener("click", () => {
+    window.location.href = "D_Makeup.html";
+  });
+  document.querySelector(".OliveHair").addEventListener("click", () => {
+    window.location.href = "Olive.html";
+  });
+  document.querySelector("#dryHairpage").addEventListener("click", () => {
+    window.location.href = "dryHair.html";
+  });
+
+  document.querySelector("#searchbar").addEventListener("keypress", (ele) => {
+    let value = document.querySelector("#searchbar").value;
+    if (ele.code === "Enter") {
+      if (value === "Lipstick") {
+        window.location.href = "Lipstick.html";
+      } else if (value === "Bride") {
+        window.location.href = "bridal.html";
+      } else if (value === "Ayurveda") {
+        window.location.href = "Ayurveda.html";
+      } else if (value === "Mehandi") {
+        window.location.href = "mehandiDesigns.html";
+      } else {
+        alert("Search Valid Details");
+        window.location.href = "index.html";
+      }
+    }
+  });
+</script>

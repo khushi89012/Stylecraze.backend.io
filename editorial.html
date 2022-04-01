@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editorial Guidelines</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg" hreflang="en-in" />
+    <link rel="stylesheet" href="./Css Files/header.css" />
+    <link rel="stylesheet" href="./Css Files/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <link rel="stylesheet" href="./Css Files/terms_style.css">
+  </head>
+  <body>
+    <!-- Header Strts -->
+    <div id="header"></div>
+    <div id="Dropdown"></div>
+    <!-- Header Ends -->
+    <!--  -->
+    <div id="k_container">
+      <h4>
+        StyleCraze Editorial Policies & Quality Standards StyleCraze Editorial
+        Policy
+      </h4>
+      <p>
+        The purpose of this editorial policy is to establish a set of processes
+        to ensure accuracy, inclusivity, objectivity, relevance, transparency,
+        and quality of the information provided on StyleCraze.
+      </p>
+
+      <h3>Our Editorial Principles</h3>
+
+      <u>
+        <li>
+          Readers First: Every article is written and published with the reader
+          in mind. We ensure to cover content that you are looking for to help
+          you up your beauty, health, and wellness routines. Our language is
+          simple, and we avoid using complex jargon.
+        </li>
+
+        <li>
+          Accuracy & Reliability: Our content is current, based on extensive
+          research, and fact-checked and reviewed by members of our medical
+          board and expert panel. We also get in touch with board-certified
+          doctors, registered dietitians, dermatologists, and licensed
+          estheticians to ensure you get access to expert-approved advice and
+          hacks (if any).
+        </li>
+
+        <li>
+          Inclusivity & Sensitivity: Our content is primarily written for a US
+          audience. But we make sure that our language promotes respect and
+          inclusivity of different age groups, ethnicities, genders and sexual
+          orientations, physical and mental abilities, and relationship
+          statuses. The articles use empathetic, compassionate, and person-first
+          language.
+        </li>
+      </u>
+
+      <h2>Our Content Creation Process</h2>
+      <p>
+        When it comes to beauty, health, and wellness, we believe in
+        transparency and sharing exactly how we go about creating content that
+        matters. Learn more about our content creation process.
+      </p>
+
+      <h2>Editorial Integrity</h2>
+      <p>
+        The content on StyleCraze is not intended to be a substitute for
+        professional medical advice, diagnosis, or treatment. Always consult
+        with your physician or a qualified healthcare provider if you have any
+        medical condition. We make a clear distinction between editorial and
+        advertorial content. StyleCraze team members who work on content do not
+        work in advertising. The StyleCraze Editorial Team does not give
+        preferential treatment to any outside resource (brand, publication, or
+        video). In articles where an external link/resource is relevant to the
+        topic and useful to a reader, appropriate disclosures are made in
+        accordance with FTC guidelines. Articles in association with brands are
+        clearly labeled ‘Sponsored’ and do not reflect the opinions of the
+        editorial team. <span>Read our advertising policy.</span>
+      </p>
+
+      <h3>Product Recommendations & Listings</h3>
+
+      <p>
+        The internet offers a plethora of options to choose from, and it can get
+        overwhelming to research and choose the best beauty and wellness
+        products out there. StyleCraze streamlines the research process to this
+        process simpler and easier for the reader. Our team of subject matter
+        experts does exhaustive research and then curates a list of
+        recommendations in each product category. Although we earn a commission
+        on every product you purchase through our site, our product
+        recommendations are completely editorial. Here’ s a peek into our
+        product research and selection process.
+      </p>
+
+      <h4>Feedback</h4>
+      <p>
+        We welcome feedback from our readers. If you have a suggestion or
+        comment, contact us at <span>service@stylecraze.com</span>
+      </p>
+    </div>
+    <!--  -->
+    <!-- Footer Starts -->
+    <div id="footer"></div>
+    <!-- Footer Ends -->
+  </body>
+</html>
+
+<script type="module">
+  // Ḥeader Starts
+  let Header_container = document.getElementById("header");
+
+  import {
+    Header,
+    Makeup,
+    empty,
+    Haircare,
+    Skincare,
+    Hairstyles,
+    Health,
+  } from "./header.js";
+
+  Header_container.innerHTML = Header();
+
+  document.getElementById("makeup").onmouseenter = function () {
+    Makeup();
+  };
+  document.getElementById("haircare").onmouseenter = function () {
+    Haircare();
+  };
+  document.getElementById("skincare").onmouseenter = function () {
+    Skincare();
+  };
+  document.getElementById("hairstyles").onmouseenter = function () {
+    Hairstyles();
+  };
+  document.getElementById("health").onmouseenter = function () {
+    Health();
+  };
+  document.getElementById("k_container").onmouseenter = function () {
+    empty();
+  };
+  document.getElementById("p_logo").onmouseenter = function () {
+    empty();
+  };
+
+  // Ḥeader Ends
+
+  // Footer start
+  let Footer_container = document.getElementById("footer");
+
+  import Footer from "./footer.js";
+
+  Footer_container.innerHTML = Footer();
+
+  document.querySelector("#ED").addEventListener("click", () => {
+    window.location.href = "editorial.html";
+  });
+  document.querySelector("#TU").addEventListener("click", () => {
+    window.location.href = "terms_of_use.html";
+  });
+  // Footer Ends
+  
+  document.querySelector("#makeup").addEventListener("click", () => {
+        window.location.href = "MakeUp.html";
+    })
+
+    document.querySelector("#haircare").addEventListener("click", () => {
+        window.location.href = "hairCare.html";
+    })
+    document.querySelector("#co_name").addEventListener("click", () => {
+        window.location.href = "index.html";
+    })
+    document.querySelector(".makeuptry").addEventListener("click", () => {
+        window.location.href = "D_Makeup.html";
+    })
+    document.querySelector(".OliveHair").addEventListener("click", () => {
+        window.location.href = "Olive.html";
+    })
+    document.querySelector("#dryHairpage").addEventListener("click", () => {
+        window.location.href = "dryHair.html";
+    })
+
+    document.querySelector("#searchbar").addEventListener("keypress",(ele)=>{
+        let value = document.querySelector("#searchbar").value;
+        if(ele.code === "Enter"){
+            if(value === "Lipstick"){
+                window.location.href = "Lipstick.html"
+            }
+            else if(value === "Bride"){
+                window.location.href = "bridal.html"
+            }
+            else if(value === "Ayurveda"){
+                window.location.href = "Ayurveda.html"
+            }
+            else if(value === "Mehandi"){
+                window.location.href = "mehandiDesigns.html"
+            }
+            else{
+                alert("Search Valid Details")
+                window.location.href = "index.html"
+            }
+        }
+    })
+</script>

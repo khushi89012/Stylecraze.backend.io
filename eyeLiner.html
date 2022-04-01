@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EyeLiner Page</title>
+    <link rel="stylesheet" href="./Css Files/header.css" />
+    <link rel="stylesheet" href="./Css Files/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg"
+    hreflang="en-in"
+  />
+    <link rel="stylesheet" href="./Css Files/eyeLiner.css">
+  </head>
+  <body>
+    <!-- Header Strts -->
+    <div id="header"></div>
+    <div id="Dropdown"></div>
+    <!-- Header Ends -->
+    <!--  -->
+    <div id="S_container">
+      <div id="S_intro">
+        <div id="S_left">
+          <h1>25 Best Eye Makeup Tutorials</h1>
+          <p>February 21, 2022 Written by <span>Esha Saxena</span></p>
+          <p>
+            There is no other territory that is richer for experimentation than
+            applying eyeshadow for makeup. This is because different eye makeup
+            can be highly transformative. The best part is you do not have to be
+            a professional to achieve these looks. You can always look for eye
+            makeup tutorials to nail this look. So, if you are wondering how to
+            choose the right color for your skin tone, we have got you covered.
+          </p>
+          <p>
+            You no longer have to worry about the eye makeup you will wear for
+            your next night out. Keep reading!
+          </p>
+          <div id="S_tutorials25">
+            <h2>Different Styles of Eye Makeup Tutorials</h2>
+            <ol>
+              <li>Brown and Gold Soft Eye Makeup</li>
+              <li>Soft Smokey Eye</li>
+              <li>Gold Festive Eyes</li>
+              <li>Defined-Crease Smokey Eye</li>
+              <li>The Simple Day-Look</li>
+              <li>Deep Blue Eyeshadow</li>
+              <li>Rose Gold Eyes</li>
+              <li>Plum Smokey Eye</li>
+              <li>Blue Winged Liner</li>
+              <li>Simple Kohl-Lined Smokey Eye</li>
+              <li>Mermaid Eyeshadow</li>
+              <li>Brown Cut Crease And Black Eyeliner</li>
+              <li>Black And Silver Smokey Eye</li>
+              <li>Copper Gold Eye Makeup</li>
+              <li>Warm Copper Green Eye Makeup</li>
+              <li>Simple Eye Makeup For Work</li>
+              <li>Magnify Your Eyes</li>
+              <li>Foiled Sunset Eyes</li>
+              <li>Navy and Purple Smokey Eye</li>
+              <li>Metallic Blue Smokey Eyeshadow</li>
+              <li>Leaf Green Eye Makeup</li>
+              <li>Deep-Gold Winged Liner</li>
+              <li>The Under 5 Minute Eye Makeup</li>
+              <li>The Classic Cat-Eye</li>
+              <li>Sultry Copper-Rose Gold Eyes</li>
+            </ol>
+          </div>
+          <div id="S_tutorials"></div>
+        </div>
+        <div id="S_right">
+          <h2>MOST POPULAR</h2>
+          <div id="S_popularItems">
+            <div class="S_items">
+              <img
+                src="https://cdn2.stylecraze.com/wp-content/uploads/2014/09/Eye-Makeup-Tips-For-Sensitive-Eyes-85x60.jpg.webp"
+              />
+              <p>Eye Makeup Tips For Sensitive Eyes</p>
+            </div>
+            <div class="S_items">
+              <img
+                src="https://cdn2.stylecraze.com/wp-content/uploads/2013/02/How-To-Apply-Eyeshadow-For-Beginners-85x60.jpg.webp"
+              />
+              <p>How To Apply Eyeshadow For Beginners (With Pictures)</p>
+            </div>
+            <div class="S_items">
+              <img
+                src="https://cdn2.stylecraze.com/wp-content/uploads/2017/09/Lakme-Kajal-Review-2-85x60.jpg.webp"
+                alt=""
+              />
+              <p>Lakme Kajal Review</p>
+            </div>
+            <div class="S_items">
+              <img
+                src="https://cdn2.stylecraze.com/wp-content/uploads/2016/06/2201-How-To-Make-Hazel-Eyes-Pop-ss-85x60.jpg.webp"
+                alt=""
+              />
+              <p>How To Make Hazel Eyes Pop</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <!-- Footer Starts -->
+    <div id="footer"></div>
+    <!-- Footer Ends -->
+  </body>
+</html>
+<script src="../Js files/eyeLiner.js"></script>
+
+<script type="module">
+  // Ḥeader Starts
+  let Header_container = document.getElementById("header");
+
+  import {
+    Header,
+    Makeup,
+    empty,
+    Haircare,
+    Skincare,
+    Hairstyles,
+    Health,
+  } from "./header.js";
+
+  Header_container.innerHTML = Header();
+
+  document.getElementById("makeup").onmouseenter = function () {
+    Makeup();
+  };
+  document.getElementById("haircare").onmouseenter = function () {
+    Haircare();
+  };
+  document.getElementById("skincare").onmouseenter = function () {
+    Skincare();
+  };
+  document.getElementById("hairstyles").onmouseenter = function () {
+    Hairstyles();
+  };
+  document.getElementById("health").onmouseenter = function () {
+    Health();
+  };
+  document.getElementById("S_container").onmouseenter = function () {
+    empty();
+  };
+  document.getElementById("p_logo").onmouseenter = function () {
+    empty();
+  };
+
+  // Ḥeader Ends
+
+  // Footer start
+  let Footer_container = document.getElementById("footer");
+
+  import Footer from "./footer.js";
+
+  Footer_container.innerHTML = Footer();
+
+  document.querySelector("#ED").addEventListener("click", () => {
+    window.location.href = "editorial.html";
+  });
+  document.querySelector("#TU").addEventListener("click", () => {
+    window.location.href = "terms_of_use.html";
+  });
+  // Footer Ends
+
+  document.querySelector("#makeup").addEventListener("click", () => {
+    window.location.href = "MakeUp.html";
+  });
+
+  document.querySelector("#haircare").addEventListener("click", () => {
+    window.location.href = "hairCare.html";
+  });
+  document.querySelector("#co_name").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  document.querySelector(".makeuptry").addEventListener("click", () => {
+    window.location.href = "D_Makeup.html";
+  });
+  document.querySelector(".OliveHair").addEventListener("click", () => {
+    window.location.href = "Olive.html";
+  });
+  document.querySelector("#dryHairpage").addEventListener("click", () => {
+    window.location.href = "dryHair.html";
+  });
+
+  document.querySelector("#searchbar").addEventListener("keypress", (ele) => {
+    let value = document.querySelector("#searchbar").value;
+    if (ele.code === "Enter") {
+      if (value === "Lipstick") {
+        window.location.href = "Lipstick.html";
+      } else if (value === "Bride") {
+        window.location.href = "bridal.html";
+      } else if (value === "Ayurveda") {
+        window.location.href = "Ayurveda.html";
+      } else if (value === "Mehandi") {
+        window.location.href = "mehandiDesigns.html";
+      } else {
+        alert("Search Valid Details");
+        window.location.href = "index.html";
+      }
+    }
+  });
+</script>

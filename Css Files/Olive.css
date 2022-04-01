@@ -1,0 +1,112 @@
+
+#D_container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 75%;
+    margin: auto;
+    grid-gap: 1%;
+    font-family: sans-serif;
+    line-height: 30px;
+    color: #424242;
+    grid-auto-flow: row;
+}
+
+#D_container p, li {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#D_author {
+    color: gray;
+}
+
+#D_path p {
+    color: #fe5c75;
+}
+
+#D_path span:hover {
+    color: #337ab7;
+    cursor: pointer;
+}
+
+span {
+    color: #fe5c75;
+}
+
+span:hover {
+    color: #337ab7;
+    cursor: pointer;
+}
+
+#D_1li1 li {
+    color: #fe5c75;
+}
+
+#D_1li1 li:hover {
+    color: #337ab7;
+    cursor: pointer;
+}
+
+#D_7li1 span {
+    color: #424242;
+    font-weight: 600;
+}
+
+#D_9li1 a {
+    color: #fe5c75;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#D_9li1 a:hover {
+    color: #337ab7;
+}
+
+.D_mp {
+    display: flex;
+    border: 1px solid grey;
+    margin: 2% 0 2% 0;
+    border-radius: 3%;
+    line-height: 17px;
+    color: #337ab7;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.D_mp h5 {
+    margin: 2% 0% 0% 2%;
+}
+
+#D_left {
+    width: 100%;
+}
+
+#D_right {
+    height: fit-content;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 390px) {
+    #D_container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+    }
+
+    #D_right h5  {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+    #D_container {
+        grid-template-columns: repeat(1,1fr);
+        width: 90%;
+    }
+
+    #D_right {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2%;
+    }
+}

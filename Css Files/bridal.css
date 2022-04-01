@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+*:focus{
+    outline: none;
+}
+body{
+    position: relative;
+    /* background: #f0f0f0; */
+    font-family: 'roboto',sans-serif;
+
+}
+.main{
+        font-weight: bold;
+        font-size: 130%;
+       }
+      
+       .discrip1{
+         
+           font-size: medium;
+           width: 40%;
+           margin-left: 20%;
+           margin-top: 1%;
+           font-size: 110%;
+       }
+       .discrip2{
+         
+         font-size: medium;
+         width: 40%;
+         margin-left: 20%;
+         margin-top: 1%;
+         font-size: 110%;
+         font-weight: bold;
+     }
+     .discrip3{
+         
+         font-size: medium;
+         width: 40%;
+         margin-left: 30%;
+         margin-top: 1%;
+         font-size: 110%;
+         font-weight: bold;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     }
+       .flex{
+           display: flex;
+       }
+       .savediv{
+           border-radius: 50%;
+           color: red;
+           height: 20%;
+           width: 20%;
+         margin-left: 90%;
+       }
+       img{
+           width: 100%;
+           height: 100%;
+       }
+      
+       @media only screen and (min-width : 0px) and (max-width : 320px) {
+            .cointainer{
+               height: 50%;
+               width: 75%;
+               color: red;
+            }
+          }
+          @media only screen and (min-width:321px) and (max-width:720px) {
+           .cointainer{
+              height: 25%;
+              width: 75%;
+           }
+       }

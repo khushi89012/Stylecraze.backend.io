@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair Care Page</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg"
+      hreflang="en-in"
+    />
+    <link rel="stylesheet" href="./Css Files/header.css" />
+    <link rel="stylesheet" href="./Css Files/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./Css Files/S_styleSheet.css" />
+  </head>
+  <body>
+    <!-- Header Strts -->
+    <div id="header"></div>
+    <div id="Dropdown"></div>
+    <!-- Header Ends -->
+    <!--  -->
+    <h1 id="S_secTitle">HAIR CARE</h1>
+    <div id="S_categories_div">
+      <div class="S_categories">Dry Hair Care</div>
+      <div class="S_categories">Hair Care Solutions</div>
+      <div class="S_categories">Dandruff</div>
+      <div class="S_categories">Basic Hair Care</div>
+      <div class="S_categories">Hair Treatment</div>
+      <div class="S_categories">Hair Fall</div>
+      <div class="S_categories">Hair Growth</div>
+      <div class="S_categories">Hair Colour</div>
+    </div>
+    <div class="S_Poster_div">
+      <img
+        src="https://cdn2.stylecraze.com/wp-content/uploads/2021/01/Hair-Cleanser-And-Shampoo-Understand-The-Difference.jpg.webp"
+        alt="poster"
+      />
+      <div class="S_About">
+        <h2>Hair Cleanser And Shampoo: Understand The Difference</h2>
+        <p>
+          You are in the store buying a shampoo when you also notice something
+          called a hair cleanser. So you stare at both, wondering how a hair
+          cleanser is different from a shampoo. They both would be the same,
+          wouldn’t they? […]
+        </p>
+        <div id="S_author">
+          <p>
+            MEDICALLY REVIEWED BY DR. MADHURI AGARWAL , MBBS, MD (DERMATOLOGY)
+            DERMATOLOGIST, COSMETIC DERMATOLOGY
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="S_beautyTips_div">
+      <div class="S_Tips">
+        <img
+          src="https://cdn2.stylecraze.com/wp-content/uploads/2021/07/Does-Alpecin-Shampoo-Work-Side-Effects-Benefits.jpg.webp"
+        />
+        <h1>Does Alpecin Shampoo Work? Side Effects And Benefits</h1>
+        <p>
+          MEDICALLY REVIEWED BY DR. MADHURI AGARWAL , MBBS, MD (DERMATOLOGY)
+          DERMATOLOGIST, COSMETIC DERMATOLOGY
+        </p>
+      </div>
+      <div class="S_Tips">
+        <img
+          src="https://cdn2.stylecraze.com/wp-content/uploads/2013/12/Mesotherapy-For-Hair--Procedure-Results-Side-Effects-And-More.jpg.webp"
+          alt=""
+        />
+        <h1>
+          Mesotherapy For Hair – Procedure, Results, Side Effects, And More
+        </h1>
+        <p>
+          MEDICALLY REVIEWED BY DR. PRIYA GILL , MBBCH, MRCP (UK), ADVANCED
+          MASTERS IN DERMATOLOGY (UKM), DIP IN AESTHETIC MEDICINE (AAAM, USA)
+          DERMATOLOGIST, DERMATOLOGY, AESTHETIC MEDICINE & VENEREOLOGY
+        </p>
+      </div>
+      <div class="S_Tips">
+        <img
+          src="https://cdn2.stylecraze.com/wp-content/uploads/2020/12/Does-Testosterone-Cause-Hair-Loss-In-Women-And-Men.jpg.webp"
+          alt=""
+        />
+        <h1>Does Testosterone Cause Hair Loss In Women And Men?</h1>
+        <p>MEDICALLY REVIEWED BY DR. REKHA YADAV , TRICHOLOGY</p>
+      </div>
+    </div>
+    <div class="S_Poster_div" id="S_PosterArea">
+      <div class="S_About" id="S_Poster1">
+        <h2>Finasteride For Hair Regrowth – Everything You Must Know</h2>
+        <p>
+          Finasteride for hair regrowth has taken the world by storm. It is a
+          prescription drug used in small doses to treat androgenic alopecia
+          (1). Androgenic alopecia is a common cause of hair loss in men and
+          women. It affects about […]
+        </p>
+        <div id="S_author">
+          <p>MEDICALLY REVIEWED BY DR. REKHA YADAV , TRICHOLOGY</p>
+        </div>
+      </div>
+      <img
+        src="https://cdn2.stylecraze.com/wp-content/uploads/2020/11/Finasteride-For-Hair-Regrowth--Everything-You-Must-Know.jpg.webp"
+      />
+    </div>
+    <div id="S_moreMakeUpTips_div" class="S_beautyTips_div"></div>
+    <!--  -->
+    <!-- Footer Starts -->
+    <div id="footer"></div>
+    <!-- Footer Ends -->
+  </body>
+</html>
+<script src="../Js files/hairCare.js" type="module">
+  import DryHair from "../Js files/hairCare.js"
+</script>
+
+<script type="module">
+  // Ḥeader Starts
+  let Header_container = document.getElementById("header");
+
+  import {
+    Header,
+    Makeup,
+    empty,
+    Haircare,
+    Skincare,
+    Hairstyles,
+    Health,
+  } from "./header.js";
+
+  Header_container.innerHTML = Header();
+
+  document.getElementById("makeup").onmouseenter = function () {
+    Makeup();
+  };
+  document.getElementById("haircare").onmouseenter = function () {
+    Haircare();
+  };
+  document.getElementById("skincare").onmouseenter = function () {
+    Skincare();
+  };
+  document.getElementById("hairstyles").onmouseenter = function () {
+    Hairstyles();
+  };
+  document.getElementById("health").onmouseenter = function () {
+    Health();
+  };
+  document.querySelector(".S_Poster_div").onmouseenter = function () {
+    empty();
+  };
+  document.getElementById("p_logo").onmouseenter = function () {
+    empty();
+  };
+
+  // Ḥeader Ends
+
+  // Footer start
+  let Footer_container = document.getElementById("footer");
+
+  import Footer from "./footer.js";
+
+  Footer_container.innerHTML = Footer();
+
+  document.querySelector("#ED").addEventListener("click", () => {
+    window.location.href = "editorial.html";
+  });
+  document.querySelector("#TU").addEventListener("click", () => {
+    window.location.href = "terms_of_use.html";
+  });
+  // Footer Ends
+
+  document.querySelector("#makeup").addEventListener("click", () => {
+    window.location.href = "MakeUp.html";
+  });
+
+  document.querySelector("#haircare").addEventListener("click", () => {
+    window.location.href = "hairCare.html";
+  });
+  document.querySelector("#co_name").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  document.querySelector(".makeuptry").addEventListener("click", () => {
+    window.location.href = "D_Makeup.html";
+  });
+  document.querySelector(".OliveHair").addEventListener("click", () => {
+    window.location.href = "Olive.html";
+  });
+  document.querySelector("#dryHairpage").addEventListener("click", () => {
+    window.location.href = "dryHair.html";
+  });
+
+  document.querySelector("#searchbar").addEventListener("keypress", (ele) => {
+    let value = document.querySelector("#searchbar").value;
+    if (ele.code === "Enter") {
+      if (value === "Lipstick") {
+        window.location.href = "Lipstick.html";
+      } else if (value === "Bride") {
+        window.location.href = "bridal.html";
+      } else if (value === "Ayurveda") {
+        window.location.href = "Ayurveda.html";
+      } else if (value === "Mehandi") {
+        window.location.href = "mehandiDesigns.html";
+      } else {
+        alert("Search Valid Details");
+        window.location.href = "index.html";
+      }
+    }
+  });
+</script>
