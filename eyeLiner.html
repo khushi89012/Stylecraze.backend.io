@@ -207,4 +207,22 @@
       }
     }
   });
+
+  document.querySelector("#P_login").addEventListener("click", gologin)
+    function gologin(){
+        window.location.href = "Login.html"
+    }
+    document.querySelector("#P_sigin").addEventListener("click", gosignin)
+    function gosignin(){
+        window.location.href = "register.html"
+    }
+
+    let check = localStorage.getItem("status");
+    console.log(check);
+    if(check != null){
+        let change = document.querySelector("#P_login");
+        let change2 = document.querySelector("#P_sigin");
+        change.innerHTML = `Hy,${check}`;
+        change2.innerHTML = null;
+    }
 </script>

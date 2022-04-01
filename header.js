@@ -7,8 +7,8 @@ let Header = () => {
         alt="StyleCraze"
         src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png"
       />
-      <button id="P_sigin" onclick="goregister()">SIGN UP</button>
-      <button id="P_login" onclick="gologin()">LOGIN</button>
+      <button id="P_sigin">SIGN UP</button>
+      <button id="P_login">LOGIN</button>
     </div>
     <div id="varaitise">
           <div id="makeup">MAKEUP</div>
@@ -291,4 +291,4 @@ let empty = () => {
 }
 
 
-export {Header, Makeup, empty, Haircare, Skincare, Hairstyles, Health};
+export {Header, Makeup, empty, Haircare, Skincare, Hairstyles, Health}; 
