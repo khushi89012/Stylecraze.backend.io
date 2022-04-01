@@ -276,7 +276,10 @@
       }
     }
   });
-  document.querySelector("#P_login").addEventListener("click", gologin)
+  daily()
+
+function daily(){
+    document.querySelector("#P_login").addEventListener("click", gologin)
     function gologin(){
         window.location.href = "Login.html"
     }
@@ -293,4 +296,5 @@
         change.innerHTML = `Hy,${check}`;
         change2.innerHTML = null;
     }
+}
 </script>
