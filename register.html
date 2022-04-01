@@ -1,47 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg" hreflang="en-in" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://i.playboard.app/p/AATXAJzeqClULfhlfbiKBd93LfUre-zyGkd-hs6M8xiH0EI/default.jpg"
+      hreflang="en-in"
     />
-    <link rel="stylesheet" href="./Css Files/loginstyle.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./Css Files/loginstyle.css" />
+  </head>
+  <body>
     <div id="s_cont">
-        <div id="s_left">
-            <img src = "https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" id="logo"/>
-           <img src="https://i.pinimg.com/originals/24/4a/57/244a57cd51c21cb2bab33a0218add5d4.jpg" alt="image" id="img1">
-           <h3>Serving Beauty Tips for Women</h3>
+      <div id="s_left">
+        <img
+          src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png"
+          id="logo"
+        />
+        <img
+          src="https://i.pinimg.com/originals/24/4a/57/244a57cd51c21cb2bab33a0218add5d4.jpg"
+          alt="image"
+          id="img1"
+        />
+        <h3>Serving Beauty Tips for Women</h3>
+      </div>
+
+      <div id="s_right">
+        <h1>Register Here</h1>
+        <div id="s_formDiv">
+          <form onsubmit="Register(event)">
+            <input type="text" placeholder="Enter Name" id="name" />
+            <input type="email" placeholder="Enter Email" id="email" />
+            <input type="password" placeholder="Enter Password" id="password" />
+            <input type="text" placeholder="Create Username" id="username" />
+            <input type="number" placeholder="Enter Mobile Number" id="mbNum" />
+            <input type="submit" />
+          </form>
+          <p>Already Have an Account? <span>Login</span></p>
         </div>
-        
-        <div id="s_right">
-            <h1>Register Here</h1>
-            <div id="s_formDiv">
-                <form>
-                    <input type="text" placeholder="Enter Name" id="name"/>
-                    <input type = number placeholder= "Enter Mobile Number" id="mbNum"/>
-                    <input type ="email" placeholder="Enter Email" id="email"/>
-                    <input type="password" placeholder="Enter Password" id="password"/>
-                    <input type ="submit" id= "submit"/>
-                </form>
-                <p>Already Have an Account? <span>Login</span></p>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
-<script src="../Js files/register.js" type="module">
-    import Register from "./Js files/register.js"
+<script>
+  async function Register(event) {
+    event.preventDefault();
+    let regiobj = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+      username: document.getElementById("username").value,
+      mobile: document.getElementById("mbNum").value,
+      description: "My first API server",
+    };
+    regiobj = JSON.stringify(regiobj);
 
-    document.querySelector("#submit").addEventListener("click", goagainregister)
+    try {
+      let url = "https://marriott-bonvoy.herokuapp.com/Register";
 
-    function  goagainregister(){
-        Register();
+      let response = await fetch(url, {
+        method: "POST",
+        body: regiobj,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let data = await response.json();
+      document.getElementById("name").value = null;
+      document.getElementById("email").value = null;
+      document.getElementById("password").value = null;
+      document.getElementById("username").value = null;
+      document.getElementById("mbNum").value = null;
+      alert("Registration Successful");
+      window.location.href = "Login.html";
+      console.log(data);
+    } catch (er) {
+      console.log("Register side", er);
+      alert("Registration failed,user already exists");
+      document.getElementById("name").value = null;
+      document.getElementById("email").value = null;
+      document.getElementById("password").value = null;
+      document.getElementById("username").value = null;
+      document.getElementById("mbNum").value = null;
     }
+  }
 </script>
